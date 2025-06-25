@@ -1,11 +1,19 @@
-#container {
+#main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#icons-container {
     display: flex;
     flex-direction: row;
     column-gap: 12px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .bi {
@@ -13,36 +21,26 @@
 }
 
 #pfp {
-    color: white;
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 5px;
     border-radius: 50%;
 }
 
 #header {
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 5px;
 
     font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: none;
+    font-optical-sizing: auto;
     font-weight: 30;
     font-style: bold;
 }
 
 #description {
     color: white;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0;
 
     font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: none;
+    font-optical-sizing: autos;
     font-weight: 30;
     font-size: 12pt;
     font-style: bold;
