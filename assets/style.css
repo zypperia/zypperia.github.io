@@ -25,21 +25,6 @@
     border-radius: 50%;
 }
 
-.code {
-    z-index: 999;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: autos;
-    font-weight: 30;
-    font-size: 12pt;
-    font-style: bold;
-}
-
 #header {
     color: white;
     margin: 5px;
@@ -48,6 +33,12 @@
     font-optical-sizing: auto;
     font-weight: 30;
     font-style: bold;
+
+    overflow: hidden;
+
+    animation:
+        typing 0.5s steps(12, end),
+        blink-caret 0.05s step-end infinite;
 }
 
 #description {
@@ -55,10 +46,12 @@
     margin: 0;
 
     font-family: "JetBrains Mono", monospace;
-    font-optical-sizing: autos;
+    font-optical-sizing: auto;
     font-weight: 30;
     font-size: 12pt;
     font-style: bold;
+
+    overflow: hidden;
 }
 
 #particles-js {
@@ -66,4 +59,23 @@
     height: 100vh;
     background-color: black;
     position: absolute;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
 }
